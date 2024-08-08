@@ -12,20 +12,23 @@ const db = mysql.createConnection({
 // menyambungkan atau membuka koneksi
 db.connect()
 
-//ambil data dari mysql
-db.query("SELECT * FROM karyawan", function (error, hasil) {
+let sql =    
+`INSERT INTO karyawan 
+(nama, gender, alamat, nip) 
+VALUES ('jokowi', 'L', 'Solo', '007')`
+//memasukkan/menambahkan data dari mysql
+db.query(sql, function (error, hasil) {
     if (error) {
         console.log(error);
     } else {
-        console.log(hasil)
-        console.log('=======')
-        console.log(hasil[1].nama)
-        console.log('=======')
-        for (let i = 0; i < hasil.length; i++) {
-            console.log(hasil[i].nama)
+        // console.log(hasil) 
+            if (hasil.affectedRows > 0) {
+                console.log ('berhasil insert data karyawan')
+            }
         }
-    }
+        
+        }
             
-        })
+        )
 
 db.end()
