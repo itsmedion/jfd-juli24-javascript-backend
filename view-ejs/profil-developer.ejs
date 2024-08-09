@@ -1,0 +1,36 @@
+,<h1>Profil Developer</h1>
+<hr>
+Nama: Diono Salim <br>
+Alamat: Jakarta,Barat <br>
+No Telp: 0813234355 <br>
+Role: <%= jabatan %> <br>
+Jenis Kelamin: <%= gender %> <br>
+Gaji Pokok: Rp <%= gaji.toLocaleString('id-ID') %> <br>
+
+<!-- cara penulisan pertama logic backend di ejs-->
+ <!-- buka tutup tag ejs setiap baris sampai logicnya selesai-->
+ <!-- html nya bisa auto ketik -->
+<% if (gaji > 5000000) { %>
+    Status: <b>Kena Pajak Penghasilan 2.5%</b>
+<% } else { %>
+    Status: <b>Tidak perlu bayar pajak</b>
+<% } %>
+
+<br>
+
+<!--cara penulisan kedua logic backend di ejs -->
+<!--buka tutup tag ejs hanya sekali -->
+<!--html nya tidak bisa auto ketik, karna htmlnya di eksekusi di dalam function append sebagai string -->
+<% 
+if (gaji > 5000000) {
+    __append('Status: <b>Kena Pajak Penghasilan 2.5%</b>')
+}else {
+    __append('Status: <b>Tidak perlu bayar pajak</b>')
+} %>
+
+<hr><hr>
+<a href="/hubungi">
+<button style="background:green; color: white;margin-top:5px; padding:10px;">
+    Hubungi saya Bos
+    </button>
+</a>
