@@ -1,0 +1,32 @@
+<h1>Data Seluruh karyawan PT Konoha Makmur Sentosa</h1>
+<hr>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>gender</th>
+            <th>Alamat</th>
+            <th>NIP</th>
+            <th>Departemen</th>
+            <th>Agama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let i = 0; i < karyawan.length; i++) {%>
+            <tr>
+                <td><%= karyawan[i].nama%></td>
+                <td><%= karyawan[i].gender%></td>
+                <td><%= karyawan[i].alamat%></td>
+                <td><%= karyawan[i].nip%></td>
+                <td><%= karyawan[i].departemen_id%></td>
+                <td><%= karyawan[i].agama_id%></td>
+            </tr>
+            <%}%>
+
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+        
+</table>
+<%= JSON.stringify(karyawan) %>
