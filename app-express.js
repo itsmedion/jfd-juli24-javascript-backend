@@ -128,6 +128,10 @@ function hapus_satukaryawan(idk) {
 })
 }
 
+app.get('/karyawan/tambah', function(req,res){
+    res.render('karyawan/form-tambah')
+})
+
 
 app.listen(port,function() {
     console.log('Server sudah siap, buka http://localhost:' + port)
