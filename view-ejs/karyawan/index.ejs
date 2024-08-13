@@ -5,7 +5,7 @@
     }
 </style>
 <hr>
-<table border="1">
+<table border="2">
     <thead>
         <tr>
             <th>Nama</th>
@@ -14,7 +14,7 @@
             <th>NIP</th>
             <th>Departemen</th>
             <th>Agama</th>
-            <th>View</th>
+            <th class="padding-td" colspan="2">View</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +28,13 @@
                 <td class="padding-td"><%= karyawan[i].agama_id%></td>
                 <td> 
                     <a href="/karyawan/detail/<%= karyawan[i].id %>">
-                    <button>Lihat Detail</button></a>
+                    <button>Lihat Detail</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/karyawan/hapus/<%= karyawan[i].id %>" onclick="return confirm('Yakin mau hapus <%= karyawan[i].nama%>??')">
+                        <button style="background-color: red ; color: white;">Hapus</button>
+                    </a>
                 </td>
             </tr>
             <%}%>
