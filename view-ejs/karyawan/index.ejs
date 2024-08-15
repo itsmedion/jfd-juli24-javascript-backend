@@ -19,7 +19,7 @@
             <th>NIP</th>
             <th>Departemen</th>
             <th>Agama</th>
-            <th class="padding-td" colspan="2">View</th>
+            <th class="padding-td" colspan="3">View</th>
         </tr>
     </thead>
     <tbody>
@@ -34,6 +34,11 @@
                 <td> 
                     <a href="/karyawan/detail/<%= karyawan[i].id %>">
                     <button>Lihat Detail</button>
+                    </a>
+                </td>
+                <td class="padding-td">
+                    <a href="/karyawan/edit/<%= karyawan[i].id %>">
+                        <button style="background-color: yellow;">Edit</button>
                     </a>
                 </td>
                 <td>
