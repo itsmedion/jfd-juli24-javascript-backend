@@ -5,6 +5,12 @@
     }
 </style>
 <hr>
+
+<% if (message) { %>
+    <div style="background-color: lightgreen; text-transform: capitalize;"> <b><%= message %></b></div>
+<% } %>
+<br>
+
 <a href="/karyawan/tambah">
    <button style="margin-bottom: 5px; background-color: lightblue ;">
     Tambah
